@@ -1,7 +1,9 @@
 # Patterns
 Demo repository to show an implementation of some useful object oriented programming patterns
 
-This is an Eclipse standard java project: all source code located in "src" folder and all documentation can be found inside "doc" folder. Folder "bin" contains .class binary files to run with Java Virtual Machine for debugging.
+This is an Eclipse standard java project: all source code located in "src" folder and 
+all documentation can be found inside "doc" folder. 
+Folder "bin" contains .class binary files to run with Java Virtual Machine for debugging.
 This software was written for Java version 1.8_212
 
 Program to show some software design pattern combined together to solve
