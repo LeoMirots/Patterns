@@ -23,12 +23,12 @@ import strategy.RedHeadDuck;
  *  3) We want to study is the total number of quacks made by a flock of ducks.
  *  	How can we add the ability to count duck quacks without having to change the duck classes?
  *  
- *  4) Why don’t we take the creation of ducks and localize  it in one place;
+ *  4) Why donï¿½t we take the creation of ducks and localize  it in one place;
  *  	We need some quality control to make sure our ducks get wrapped.
  *  
- *  5) It’s getting a little difficult to manage all these different ducks separately.
+ *  5) Itï¿½s getting a little difficult to manage all these different ducks separately.
  *  	Is there any way you can help us manage ducks as a whole, 
- *  	and perhaps even allow us to manage a few duck “families” that we’d like to keep track of?
+ *  	and perhaps even allow us to manage a few duck ï¿½familiesï¿½ that weï¿½d like to keep track of?
  */
 
 /**
@@ -113,9 +113,9 @@ public class Program {
 		Quackable redHeadDuck = new QuackCounter(new RedHeadDuck()); 	//Verso della papera dalla testa rossa
 		Quackable pheasantCall = new QuackCounter(new PheasantCall()); 	//Verso del fagiano
 		
-		Quackable gooseDuck = new QuackCounter(new GooseAdapter(new Goose()));	//Verso dell'oca
+		Quackable gooseDuck = new GooseAdapter(new Goose());	//Verso dell'oca
 		/*
-		 * IMPORTANT: the problem with wrapping objects: you have to make sure they get wrapped or they don’t get the decorated behavior.
+		 * IMPORTANT: the problem with wrapping objects: you have to make sure they get wrapped or they donï¿½t get the decorated behavior.
 		 */
 		
 		System.out.println("\nStarting Duck and Goose counter simulator...\n");
@@ -143,7 +143,7 @@ public class Program {
 		
 		Quackable gooseDuck = new GooseAdapter(new Goose());	//Verso dell'oca
 		/*
-		 * IMPORTANT: the problem with wrapping objects: you have to make sure they get wrapped or they don’t get the decorated behavior.
+		 * IMPORTANT: the problem with wrapping objects: you have to make sure they get wrapped or they donï¿½t get the decorated behavior.
 		 * In this case it's right because we won't count "honk" of geese but only quack of ducks;
 		 */
 		
@@ -172,7 +172,7 @@ public class Program {
 		
 		Quackable gooseDuck = new GooseAdapter(new Goose());	//Verso dell'oca
 		/*
-		 * IMPORTANT: the problem with wrapping objects: you have to make sure they get wrapped or they don’t get the decorated behavior.
+		 * IMPORTANT: the problem with wrapping objects: you have to make sure they get wrapped or they donï¿½t get the decorated behavior.
 		 * In this case it's right because we won't count "honk" of geese but only quack of ducks;
 		 */
 		
@@ -183,6 +183,9 @@ public class Program {
 		ducksFlock.add(mallardDuck);
 		ducksFlock.add(redHeadDuck);
 		ducksFlock.add(pheasantCall);
+		ducksFlock.add(factory.createRedheadDuck());
+		
+		Quackable anatra1 = new QuackCounter(new RedHeadDuck());
 		
 		
 		System.out.println("\nStarting Duck and Goose composite simulator...\n");
@@ -193,7 +196,7 @@ public class Program {
 			*/
 			makeSound(ducksFlock);
 			 
-			
+			makeSound(anatra1);
 			makeSound(gooseDuck);
 			System.out.println("The ducks quacked " + QuackCounter.getQuacks() + " times\n");
 		System.out.println("\nEnding Duck and Goose composite simulator...\n");
